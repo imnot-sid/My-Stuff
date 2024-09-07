@@ -1,0 +1,39 @@
+print("-----Welcome to Sid's Bakery-----")
+print("Croissant is 45p, Choco Brownie is 75p and Sid's special glazed doughnut are £1.15")
+amount = False
+while amount == False:
+    amount_croissant = False
+    while amount_croissant == False:
+        croissant_amount = float(input("How many croissants would you like?"))
+        if croissant_amount>=1 and croissant_amount<=20:
+            amount_croissant = True
+            croissant_cost = croissant_amount * 0.45
+        else:
+            print("Sorry you must enter a number between 1 and 20...")
+    amount_brownie = False
+    while amount_brownie == False:
+        brownie_amount = float(input("How many choco brownies would you like?"))
+        if brownie_amount>=1 and brownie_amount<=20:
+            amount_brownie = True
+            brownie_cost = brownie_amount * 0.75
+        else:
+            print("Sorry you must enter a number between 1 and 20...")
+        amount_doughnut = False
+    while amount_doughnut == False:
+        doughnut_amount = float(input("How many sid's special glazed doughnuts would you like?"))
+        if doughnut_amount>=1 and doughnut_amount<=20:
+            amount_doughnut = True
+            doughnut_cost = doughnut_amount * 1.15
+        else:
+            print("Sorry you must enter a number between 1 and 20...")
+    print("Your order is", croissant_amount," croissants, ", brownie_amount," choco brownies and ", doughnut_amount, " special doughnuts")
+    answer = input("are you happy with this order?")
+    if answer.upper() == "YES":
+        amount = True
+    else:
+        print("ok restarting process")
+print(croissant_amount, " croissant amount = ", croissant_cost)
+print(brownie_amount, " croissant amount = ", brownie_cost)
+print(doughnut_amount, " croissant amount = ", doughnut_cost)
+total_cost = croissant_cost + brownie_cost + doughnut_cost
+print("total : ", total_cost)
