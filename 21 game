@@ -1,0 +1,29 @@
+win = False
+total = 0
+
+while win == False:
+    player1 = int(input("Player 1 enter a number: "))
+    if player1 >=1 or player1 <=2:
+        total = total + player1
+        print(total)
+        if total == 21:
+            print("Player 1 wins")
+            winner = "Player1"
+            win = True
+            break
+            
+    else:
+        print("Not a valid number you have lost your go")
+    player2 = int(input("Player 2 enter a number: "))
+    if player2 >=1 or player2 <=2:
+        total = total + player2
+        print(total)
+        if total == 21:
+            print("Player 2 wins")
+            winner = "Player2"
+            win = True
+            break
+    else:
+        print("Not a valid number you have lost your go")
+
+print(f"Game over - well done {winner} you have won!")
